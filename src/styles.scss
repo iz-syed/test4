@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --black-rgb: 0,0,0;
+}
+.flex-root {
+    flex: 1;
+}
+
+.flex-column-auto {
+    flex: none;
+}
+
+.flex-column-fluid {
+    flex: 1 0 auto;
+}
+
+.flex-row-auto {
+    flex: 0 0 auto;
+}
+
+.flex-row-fluid {
+    flex: 1 auto;
+    min-width: 0;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-stack {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-equal {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+}
+
+body {
+    --bs-body-bg:#fbf9f6;
+    background-color: var(--bs-body-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.card.card-with-shadow {
+    box-shadow: 0 2px 20px rgba(var(--black-rgb),.06);
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+$size:100; 
+
+@for $i from 1 through $size {
+    .font-#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+$value:650; 
+
+@for $i from 1 through $value {
+    
+    // Width | Min | Max
+    .width-#{$value} {
+        width: #{$value}px;
+    }
+    .min-width-#{$value} {
+        min-width: #{$value}px;
+    }
+    .max-width-#{$value} {
+        max-width: #{$value}px;
+    }
+    
+    // Height | Min | Max
+    .height-#{$value} {
+        height: #{$value}px;
+    }
+    .min-height-#{$value} {
+        min-height: #{$value}px;
+    }
+    .max-height-#{$value} {
+        max-height: #{$value}px;
+    }
+}
